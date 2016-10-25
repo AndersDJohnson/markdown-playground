@@ -1,7 +1,3 @@
-<style type="text/css">
-    ol { list-style-type: lower-alpha; }
-</style>
-
 ## Violation Witnesses as Declarative Test Harnesses
 
 A test vector is a sequence of input values provided to a system in order to test that system.
@@ -134,7 +130,7 @@ There are two possible paths that satisfy this condition:
 1. The first input value is non-zero, and the condition in line 5 holds and ``x`` is incremented from ``1`` to ``2`` in line 6. Then, the second input value must be non-zero so that the condition in line 8 holds, and the third input value in line 9 must be ``40`` to increase ``x`` from ``2`` to ``42``.
 2. The first input value is zero, and the condition in line 5 does not hold. Then, the second input value must be non-zero so that the condition in line 8 holds, and the third input value in line 9 must be ``41`` to increase ``x`` from ``1`` to ``42``.
 
-The following [violation witness](example-2-witness.graphml) (``example-2-witness.graphml``) for this verification task qualifies as a declarative test harness by providing the test vector for the error path described in scenario a):
+The following [violation witness](example-2-witness.graphml) (``example-2-witness.graphml``) for this verification task qualifies as a declarative test harness by providing the test vector for the error path described in scenario 1):
 
 ```xml
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
