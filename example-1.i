@@ -5,5 +5,5 @@ int main() {
   while(__VERIFIER_nondet_int()) {
     x = x + 2;
   }
-  if (x >= 1) __VERIFIER_error ();
+  if (x >= 1) __VERIFIER_error();
 }
