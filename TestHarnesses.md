@@ -80,7 +80,12 @@ The following [violation witness](example-1-witness.graphml) (``example-1-witnes
 </graphml>
 ```
 
-A witness validator may now produce a [test harness](example-1-harness.c) (``example-1-harness.c``):
+A witness validator may now produce a test harness.
+For example, you can use [CPAchecker](http://cpachecker.sosy-lab.org) to produce the test harness:
+
+``scripts/cpa.sh -generate-test-harness -spec test/programs/benchmarks/PropertyERROR.prp -spec example-1-witness.graphml example-1.i``
+
+CPAchecker produces the following [test harness](example-1-harness.c) (``example-1-harness.c``) for this example:
 
 ```C
 #include <stdlib.h>
@@ -187,7 +192,12 @@ The following [violation witness](example-2-witness.graphml) (``example-2-witnes
 </graphml>
 ```
 
-A witness validator may now produce a [test harness](example-2-harness.c) (``example-2-harness.c``):
+A witness validator may now produce a test harness.
+For example, you can use [CPAchecker](http://cpachecker.sosy-lab.org) to produce the test harness:
+
+``scripts/cpa.sh -generate-test-harness -spec test/programs/benchmarks/PropertyERROR.prp -spec example-2-witness.graphml example-2.i``
+
+CPAchecker produces the following [test harness](example-2-harness.c) (``example-2-harness.c``) for this example:
 
 ```C
 #include <stdlib.h>
