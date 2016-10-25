@@ -126,10 +126,14 @@ int main() {
 ```
 For the call to the ``__VERIFIER_error`` function in line 11 to be executed, ``x`` must be equal to ``42`` at that location.
 There are two possible paths that satisfy this condition:
-a) The first input value is non-zero, and the condition in line 5 holds and ``x`` is incremented from ``1`` to ``2`` in line 6.
-   Then, the second input value must be non-zero so that the condition in line 8 holds, and the third input value in line 9 must be ``40`` to increase ``x`` from ``2`` to ``42``.
-b) The first input value is zero, and the condition in line 5 does not hold.
-   Then, the second input value must be non-zero so that the condition in line 8 holds, and the third input value in line 9 must be ``41`` to increase ``x`` from ``1`` to ``42``.
+<ol type="a">
+<li>The first input value is non-zero, and the condition in line 5 holds and ``x`` is incremented from ``1`` to ``2`` in line 6.
+    Then, the second input value must be non-zero so that the condition in line 8 holds, and the third input value in line 9 must be ``40`` to increase ``x`` from ``2`` to ``42``.
+</li>
+<li>The first input value is zero, and the condition in line 5 does not hold.
+    Then, the second input value must be non-zero so that the condition in line 8 holds, and the third input value in line 9 must be ``41`` to increase ``x`` from ``1`` to ``42``.
+</li>
+</ol>
 The following [violation witness](example-2-witness.graphml) (``example-2-witness.graphml``) for this verification task qualifies as a declarative test harness by providing the test vector for the error path described in scenario a):
 
 ```xml
